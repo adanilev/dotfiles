@@ -1,0 +1,12 @@
+# run these commands after making any changes to this file:
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# source ~/.zsh_plugins.sh
+
+# syntax highlighting for commands
+zdharma/fast-syntax-highlighting
+# autosuggest
+zsh-users/zsh-autosuggestions
+# prompt
+denysdovhan/spaceship-prompt
+# yarn completions
+buonomo/yarn-completion
