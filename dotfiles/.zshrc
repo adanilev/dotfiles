@@ -41,6 +41,12 @@ bindkey "^?" backward-delete-char
 # show the correct vi mode status in the prompt
 spaceship_vi_mode_enable
 
+# add keys to ssh-agent
+ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
+
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ### aliases ###
 
