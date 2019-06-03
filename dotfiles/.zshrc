@@ -19,7 +19,7 @@ setopt auto_menu
 setopt always_to_end
 
 # use compinit for autocompletion
-zstyle :compinstall filename '/Users/adanilev/.zshrc'
+zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit
 compinit
 # use complist to see a list of autocomplete results
