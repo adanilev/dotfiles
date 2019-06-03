@@ -1,3 +1,6 @@
+# profile zsh perf if sluggish
+#zmodload zsh/zprof
+
 # history
 setopt hist_reduce_blanks
 setopt inc_append_history
@@ -38,15 +41,9 @@ source ~/.zsh_plugins.sh
 bindkey -v
 # delete after leaving normal mode in vi-mode
 bindkey "^?" backward-delete-char
-# show the correct vi mode status in the prompt
-spaceship_vi_mode_enable
 
 # add keys to ssh-agent
 ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
-
-# nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ### aliases ###
 
@@ -57,3 +54,6 @@ alias la='ls -la'
 # safer move and copy
 alias cp='cp -i'
 alias mv='mv -i'
+
+# load nvm only when we need to use it because it's slow
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'

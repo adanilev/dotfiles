@@ -7,6 +7,8 @@ zdharma/fast-syntax-highlighting
 # autosuggest
 zsh-users/zsh-autosuggestions
 # prompt
-denysdovhan/spaceship-prompt
+mafredri/zsh-async
+sindresorhus/pure
+# denysdovhan/spaceship-prompt
 # yarn completions
 buonomo/yarn-completion
