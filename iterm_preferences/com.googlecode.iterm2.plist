@@ -998,15 +998,9 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/code/dotfiles/iterm_preferences</string>
-	<key>NSNavLastUserSetHideExtensionButtonState</key>
-	<false/>
+	<string>~/logs/PRODUCTION</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{799, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -1023,7 +1017,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -1039,18 +1033,14 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>1037 808 445 307 0 0 2560 1417 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>930 596 700 622 0 0 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>599 930 606 469 0 0 2560 1417 </string>
+	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>19 853 796 486 0 0 2560 1417 </string>
+	<string>189 380 918 494 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 0 1278 1417 0 0 2560 1417 </string>
+	<string>0 23 1440 854 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 0 1278 1417 0 0 2560 1417 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1673,7 +1663,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
@@ -1900,6 +1890,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Automatically Log</key>
+			<true/>
 			<key>BM Growl</key>
 			<true/>
 			<key>Background Color</key>
@@ -2330,6 +2322,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Log Directory</key>
+			<string>/Users/p768740/logs/PRODUCTION</string>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
@@ -3693,7 +3687,7 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>56B319A1-E692-4434-96CD-8EA90962808B</string>
+	<string>06B5191A-F8C5-4798-A47E-4F3F4B1DAF14</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3701,7 +3695,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>548601313.03335297</real>
+	<real>575418458.210572</real>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -3738,19 +3732,15 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/code/dotfiles/iterm_preferences</string>
+	<string>/Users/p768740/code/dotfiles/iterm_preferences</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=2</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=75</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2019-06-02T08:42:22Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowPaneTitles</key>
@@ -3768,7 +3758,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.9</string>
+	<string>3.2.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

@@ -55,3 +55,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"make shift-tab do the opposite of tab
+inoremap <S-Tab> <C-d>

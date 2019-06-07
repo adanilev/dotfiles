@@ -45,15 +45,19 @@ bindkey "^?" backward-delete-char
 # add keys to ssh-agent
 ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 
+# load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+source "${HOME}/.zshrc_work"
+
+# TODO: break these into a separate file
 ### aliases ###
 
 # easier ls
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -lh'
+alias la='ls -lah'
+alias ltr='ls -ltrh'
 
 # safer move and copy
 alias cp='cp -i'
 alias mv='mv -i'
-
-# load nvm only when we need to use it because it's slow
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'

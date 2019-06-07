@@ -26,4 +26,5 @@ path=("${HOME}/bin" $path)
 path=("${HOME}/.yarn/bin" $path)
 path=("${HOME}/.config/yarn/global/node_modules/.bin" $path)
 
-source .zshenv_work
+# TODO: make an array of suffixes and loop for .zshenv and .zshrc
+source "${HOME}/.zshenv_work"
