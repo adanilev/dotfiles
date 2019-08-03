@@ -26,5 +26,13 @@ path=("${HOME}/bin" $path)
 path=("${HOME}/.yarn/bin" $path)
 path=("${HOME}/.config/yarn/global/node_modules/.bin" $path)
 
-# TODO: make an array of suffixes and loop for .zshenv and .zshrc
-source "${HOME}/.zshenv_work"
+# homebrew python
+path=("/usr/local/opt/python/libexec/bin" $path)
+
+# aws cli
+path=("${HOME}/.local/bin" $path)
+
+# load work specific config if it's there
+if [ -f "${HOME}/.zshenv_work" ]; then
+  source "${HOME}/.zshenv_work"
+fi
