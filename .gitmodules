@@ -1,0 +1,24 @@
+[submodule ".vim/pack/Xuyuanp/start/nerdtree-git-plugin"]
+	path = .vim/pack/Xuyuanp/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule ".vim/pack/scrooloose/start/nerdtree"]
+	path = .vim/pack/scrooloose/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/pack/tpope/start/vim-commentary"]
+	path = .vim/pack/tpope/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/pack/tpope/start/vim-fugitive"]
+	path = .vim/pack/tpope/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/tpope/start/vim-surround"]
+	path = .vim/pack/tpope/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/tpope/start/vim-vinegar"]
+	path = .vim/pack/tpope/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule ".vim/pack/typescript/start/typescript-vim"]
+	path = .vim/pack/typescript/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+[submodule ".vim/pack/vim-airline/start/vim-airline"]
+	path = .vim/pack/vim-airline/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
