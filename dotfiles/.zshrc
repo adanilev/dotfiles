@@ -48,6 +48,10 @@ ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 # load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# load sdkman
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
 # load work specific config if it's there
 if [ -f "${HOME}/.zshrc_work" ]; then
   source "${HOME}/.zshrc_work"
@@ -64,3 +68,6 @@ alias ltr='ls -ltrh'
 # safer move and copy
 alias cp='cp -i'
 alias mv='mv -i'
+
+# terraform
+alias tf='terraform'
