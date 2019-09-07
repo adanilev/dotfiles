@@ -50,6 +50,12 @@ set shiftwidth=2
 set splitbelow
 set splitright
 
+"decrease timeout to make status bar reflect faster
+set ttimeoutlen=10
+
+"NERDTree config
+let NERDTreeShowHidden=1
+
 "make switching windows easier
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
