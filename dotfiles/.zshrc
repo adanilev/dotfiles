@@ -31,8 +31,9 @@ zstyle ':completion:*' group-name ''
 # style the completion options
 zstyle ':completion:::::' completer _expand _complete _ignored
 
-# bash reverse history search
-bindkey '^r' history-incremental-search-backward
+# bash reverse history search in both vi command and insert mode
+bindkey -M vicmd '^r' history-incremental-pattern-search-backward
+bindkey -M viins '^r' history-incremental-pattern-search-backward
 
 # load plugins
 source ~/.zsh_plugins.sh

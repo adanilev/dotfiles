@@ -11,10 +11,9 @@ export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 # ignore some commands
 export HISTORY_IGNORE="(ls|ll|la|pwd|cd|exit)"
+
 # nvm
 export NVM_DIR="${HOME}/.nvm"
-# go
-export GOPATH=$(go env GOPATH)
 
 ### path ###
 
@@ -33,9 +32,6 @@ path=("/usr/local/opt/python/libexec/bin" $path)
 
 # aws cli
 path=("${HOME}/.local/bin" $path)
-
-# go
-path=("${GOPATH//://bin:}/bin" $path)
 
 # load work specific config if it's there
 if [ -f "${HOME}/.zshenv_work" ]; then
