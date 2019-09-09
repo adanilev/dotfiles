@@ -1,5 +1,5 @@
 # run these commands after making any changes to this file:
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh
 # source ~/.zsh_plugins.sh
 
 # syntax highlighting for commands
