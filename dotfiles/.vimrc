@@ -1,3 +1,6 @@
+"be able to use the mouse
+set mouse=a
+
 "syntax highlighting on
 syntax on
 

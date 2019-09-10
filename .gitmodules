@@ -22,3 +22,9 @@
 [submodule "dotfiles/.vim/pack/vim-airline/start/vim-airline"]
 	path = dotfiles/.vim/pack/vim-airline/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "dotfiles/.vim/pack/vim-scripts/start/ReplaceWithRegister"]
+	path = dotfiles/.vim/pack/vim-scripts/start/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister
+[submodule "dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object"]
+	path = dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
