@@ -67,3 +67,8 @@ nnoremap <C-H> <C-W><C-H>
 
 "make shift-tab do the opposite of tab
 inoremap <S-Tab> <C-d>
+
+"remap keys for christoomey/vim-system-copy plugin
+nmap Y <Plug>SystemCopy
+xmap Y <Plug>SystemCopy
+nmap P <Plug>SystemPaste

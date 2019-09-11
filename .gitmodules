@@ -28,3 +28,6 @@
 [submodule "dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object"]
 	path = dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule "dotfiles/.vim/pack/christoomey/start/vim-system-copy"]
+	path = dotfiles/.vim/pack/christoomey/start/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy
