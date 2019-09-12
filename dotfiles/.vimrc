@@ -26,13 +26,6 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
-"always display the status line
-set laststatus=2
-"modifiedflag, charcount, filepercent, filepath
-set statusline=%=%m\ %c\ %P\ %f
-"show line and column number in the status line
-set ruler
-
 "always set autoindenting on
 set autoindent
 
@@ -59,6 +52,11 @@ set ttimeoutlen=10
 "NERDTree config
 let NERDTreeShowHidden=1
 
+"vim-airline config
+"show tabline at top
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='onedark'
+
 "make switching windows easier
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -72,3 +70,8 @@ inoremap <S-Tab> <C-d>
 nmap Y <Plug>SystemCopy
 xmap Y <Plug>SystemCopy
 nmap P <Plug>SystemPaste
+
+"easier tab switching
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-X> :bdelete<CR>
