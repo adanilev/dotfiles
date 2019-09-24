@@ -1,4 +1,4 @@
-# profile zsh perf if sluggish
+# profile zsh perf if sluggish - uncomment last line too
 #zmodload zsh/zprof
 
 # history
@@ -76,3 +76,5 @@ alias mv='mv -i'
 
 # terraform
 alias tf='terraform'
+
+#zprof
