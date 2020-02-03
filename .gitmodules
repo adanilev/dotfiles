@@ -31,3 +31,6 @@
 [submodule "dotfiles/.vim/pack/plugins/start/nord-vim"]
 	path = dotfiles/.vim/pack/plugins/start/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
+[submodule "dotfiles/.vim/pack/plugins/start/typescript-vim"]
+	path = dotfiles/.vim/pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
