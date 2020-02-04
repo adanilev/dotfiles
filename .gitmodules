@@ -1,36 +1,36 @@
-[submodule "dotfiles/.vim/pack/Xuyuanp/start/nerdtree-git-plugin"]
-	path = dotfiles/.vim/pack/Xuyuanp/start/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "dotfiles/.vim/pack/scrooloose/start/nerdtree"]
-	path = dotfiles/.vim/pack/scrooloose/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "dotfiles/.vim/pack/tpope/start/vim-commentary"]
-	path = dotfiles/.vim/pack/tpope/start/vim-commentary
-	url = https://github.com/tpope/vim-commentary
-[submodule "dotfiles/.vim/pack/tpope/start/vim-fugitive"]
-	path = dotfiles/.vim/pack/tpope/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "dotfiles/.vim/pack/tpope/start/vim-surround"]
-	path = dotfiles/.vim/pack/tpope/start/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "dotfiles/.vim/pack/tpope/start/vim-vinegar"]
-	path = dotfiles/.vim/pack/tpope/start/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar
-[submodule "dotfiles/.vim/pack/typescript/start/typescript-vim"]
-	path = dotfiles/.vim/pack/typescript/start/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim
-[submodule "dotfiles/.vim/pack/vim-airline/start/vim-airline"]
-	path = dotfiles/.vim/pack/vim-airline/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "dotfiles/.vim/pack/vim-scripts/start/ReplaceWithRegister"]
-	path = dotfiles/.vim/pack/vim-scripts/start/ReplaceWithRegister
+[submodule "dotfiles/.vim/pack/plugins/start/ReplaceWithRegister"]
+	path = dotfiles/.vim/pack/plugins/start/ReplaceWithRegister
 	url = https://github.com/vim-scripts/ReplaceWithRegister
-[submodule "dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object"]
-	path = dotfiles/.vim/pack/michaeljsmith/start/vim-indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object
-[submodule "dotfiles/.vim/pack/christoomey/start/vim-system-copy"]
-	path = dotfiles/.vim/pack/christoomey/start/vim-system-copy
-	url = https://github.com/christoomey/vim-system-copy
-[submodule "dotfiles/.vim/pack/vim-airline/start/vim-airline-themes"]
-	path = dotfiles/.vim/pack/vim-airline/start/vim-airline-themes
+[submodule "dotfiles/.vim/pack/plugins/start/fzf"]
+	path = dotfiles/.vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "dotfiles/.vim/pack/plugins/start/nerdcommenter"]
+	path = dotfiles/.vim/pack/plugins/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter
+[submodule "dotfiles/.vim/pack/plugins/start/vim-airline"]
+	path = dotfiles/.vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "dotfiles/.vim/pack/plugins/start/vim-airline-themes"]
+	path = dotfiles/.vim/pack/plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "dotfiles/.vim/pack/plugins/start/vim-fugitive"]
+	path = dotfiles/.vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "dotfiles/.vim/pack/plugins/start/vim-indent-object"]
+	path = dotfiles/.vim/pack/plugins/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule "dotfiles/.vim/pack/plugins/start/vim-surround"]
+	path = dotfiles/.vim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "dotfiles/.vim/pack/plugins/start/vim-system-copy"]
+	path = dotfiles/.vim/pack/plugins/start/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy
+[submodule "dotfiles/.vim/pack/plugins/start/vim-vinegar"]
+	path = dotfiles/.vim/pack/plugins/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule "dotfiles/.vim/pack/plugins/start/nord-vim"]
+	path = dotfiles/.vim/pack/plugins/start/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim
+[submodule "dotfiles/.vim/pack/plugins/start/typescript-vim"]
+	path = dotfiles/.vim/pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim

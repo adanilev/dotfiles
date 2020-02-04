@@ -49,6 +49,9 @@ ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 # load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# load fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # load sdkman
 export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"

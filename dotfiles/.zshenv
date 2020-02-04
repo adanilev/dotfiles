@@ -33,6 +33,9 @@ path=("/usr/local/opt/python/libexec/bin" $path)
 # aws cli
 path=("${HOME}/.local/bin" $path)
 
+# neovim
+path=("${HOME}/bin/nvim-osx64/bin" $path)
+
 # load work specific config if it's there
 if [ -f "${HOME}/.zshenv_work" ]; then
   source "${HOME}/.zshenv_work"
