@@ -1,5 +1,5 @@
 .PHONY: all
-all: dotfiles update-zsh-plugins install-fzf
+all: dotfiles update-zsh-plugins install-all-the-things
 
 .PHONY: dotfiles
 dotfiles:
@@ -14,6 +14,6 @@ dotfiles:
 update-zsh-plugins:
 	antibody bundle < ${HOME}/.zsh_plugins.txt > ${HOME}/.zsh_plugins.sh
 
-.PHONY: install-fzf
-install-fzf:
-	bash $(CURDIR)/dotfiles/.vim/pack/plugins/start/fzf/install --no-update-rc --key-bindings --completion
+.PHONY: install-all-the-things
+install-all-the-things:
+	bash $(CURDIR)/install.sh

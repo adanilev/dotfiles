@@ -4,7 +4,7 @@ set -o nounset    # error when referencing undefined variable
 set -o errexit    # exit when command fails
 
 # https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
-function installCoc() {
+function installCoc {
   echo "installing coc.nvim"
   mkdir -p ~/.vim/pack/plugins/start
   cd ~/.vim/pack/plugins/start
@@ -28,5 +28,11 @@ function installCoc() {
     --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 }
 
+function installFzf {
+  echo "installing fzf"
+  bash ${HOME}/.vim/pack/plugins/start/fzf/install --no-update-rc --key-bindings --completion
+}
+
 # TODO: install nvm
 installCoc
+installFzf

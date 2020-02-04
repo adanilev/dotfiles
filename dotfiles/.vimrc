@@ -96,8 +96,10 @@ nmap cy <Plug>SystemCopy
 xmap cy <Plug>SystemCopy
 nmap cp <Plug>SystemPaste
 
+"nerdcommenter config
 "comment on the far left
 let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 1
 
 "remap fzf trigger
 nnoremap <silent> <C-p> :FZF<CR>
@@ -122,3 +124,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+"ReplaceWithRegister
+nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
+nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
