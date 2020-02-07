@@ -19,15 +19,6 @@ set nowrap
 
 "use hybrid relative line numbers
 set number relativenumber
-"make the line numbers grey
-highlight LineNr ctermfg=grey
-
-"highlight the current line in the active window only
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
 
 "always set autoindenting on
 set autoindent
