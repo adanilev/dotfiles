@@ -61,6 +61,9 @@ nmap ; :
 "map leader to space
 let mapleader="\<Space>"
 
+"remove search highlight
+nnoremap <Leader><Space> :nohlsearch<CR>
+
 "make switching windows easier
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>

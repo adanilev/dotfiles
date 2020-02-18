@@ -25,6 +25,7 @@ function installCoc {
     coc-json \
     coc-tsserver \
     coc-yaml \
+    coc-pairs \
     --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 }
 
