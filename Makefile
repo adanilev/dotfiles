@@ -4,7 +4,7 @@ all: dotfiles update-zsh-plugins install-all-the-things
 .PHONY: dotfiles
 dotfiles:
 	cp $(CURDIR)/dotfiles/gitconfig $(CURDIR)/dotfiles/.gitconfig; \
-	for file in $(shell find $(CURDIR)/dotfiles -name ".*" -depth 1); do \
+	for file in $(shell find $(CURDIR)/dotfiles -maxdepth 1 -name ".*"); do \
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/$$f; \
     git submodule update --init --recursive; \
