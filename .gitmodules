@@ -1,36 +1,36 @@
 [submodule "dotfiles/.vim/pack/plugins/start/ReplaceWithRegister"]
-	path = dotfiles/.vim/pack/plugins/start/ReplaceWithRegister
+	path = dotfiles/nvim/plugins/start/ReplaceWithRegister
 	url = https://github.com/vim-scripts/ReplaceWithRegister
 [submodule "dotfiles/.vim/pack/plugins/start/fzf"]
-	path = dotfiles/.vim/pack/plugins/start/fzf
+	path = dotfiles/nvim/plugins/start/fzf
 	url = https://github.com/junegunn/fzf
 [submodule "dotfiles/.vim/pack/plugins/start/nerdcommenter"]
-	path = dotfiles/.vim/pack/plugins/start/nerdcommenter
+	path = dotfiles/nvim/plugins/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter
 [submodule "dotfiles/.vim/pack/plugins/start/vim-airline"]
-	path = dotfiles/.vim/pack/plugins/start/vim-airline
+	path = dotfiles/nvim/plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "dotfiles/.vim/pack/plugins/start/vim-airline-themes"]
-	path = dotfiles/.vim/pack/plugins/start/vim-airline-themes
+	path = dotfiles/nvim/plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "dotfiles/.vim/pack/plugins/start/vim-fugitive"]
-	path = dotfiles/.vim/pack/plugins/start/vim-fugitive
+	path = dotfiles/nvim/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "dotfiles/.vim/pack/plugins/start/vim-indent-object"]
-	path = dotfiles/.vim/pack/plugins/start/vim-indent-object
+	path = dotfiles/nvim/plugins/start/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object
 [submodule "dotfiles/.vim/pack/plugins/start/vim-surround"]
-	path = dotfiles/.vim/pack/plugins/start/vim-surround
+	path = dotfiles/nvim/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "dotfiles/.vim/pack/plugins/start/vim-system-copy"]
-	path = dotfiles/.vim/pack/plugins/start/vim-system-copy
+	path = dotfiles/nvim/plugins/start/vim-system-copy
 	url = https://github.com/christoomey/vim-system-copy
 [submodule "dotfiles/.vim/pack/plugins/start/vim-vinegar"]
-	path = dotfiles/.vim/pack/plugins/start/vim-vinegar
+	path = dotfiles/nvim/plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
 [submodule "dotfiles/.vim/pack/plugins/start/nord-vim"]
-	path = dotfiles/.vim/pack/plugins/start/nord-vim
+	path = dotfiles/nvim/plugins/start/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
 [submodule "dotfiles/.vim/pack/plugins/start/typescript-vim"]
-	path = dotfiles/.vim/pack/plugins/start/typescript-vim
+	path = dotfiles/nvim/plugins/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim

@@ -1,9 +1,17 @@
+NVIM_PLUGINS_DIR=$(HOME)/.local/share/nvim/site/pack
+
 .PHONY: all
-all: dotfiles update-zsh-plugins install-all-the-things
+all: non-dot-files dotfiles update-zsh-plugins install-all-the-things
+
+.PHONY: dotfiles
+non-dot-files:
+	mkdir -p ${NVIM_PLUGINS_DIR}; \
+	ln -sfn $(CURDIR)/dotfiles/gitconfig $(HOME)/.gitconfig; \
+	ln -sfn $(CURDIR)/dotfiles/nvim/plugins ${NVIM_PLUGINS_DIR}/plugins; \
+	ln -sfn $(CURDIR)/dotfiles/nvim/init.vim $(HOME)/.config/nvim/init.vim;
 
 .PHONY: dotfiles
 dotfiles:
-	cp $(CURDIR)/dotfiles/gitconfig $(CURDIR)/dotfiles/.gitconfig; \
 	for file in $(shell find $(CURDIR)/dotfiles -maxdepth 1 -name ".*"); do \
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/$$f; \

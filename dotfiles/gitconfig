@@ -40,8 +40,8 @@
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
-  # Add all files, create wip commit and push
-  wip = !git add -A && git commit -m wip && git push
+	# Add all files, create wip commit and push
+	wip = !git add -A && git commit -m wip && git push
 
 [core]
 
