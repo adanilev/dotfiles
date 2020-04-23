@@ -28,17 +28,8 @@ typeset -U path
 path=("${HOME}/bin" $path)
 
 # yarn
-path=("${HOME}/.yarn/bin" $path)
-path=("${HOME}/.config/yarn/global/node_modules/.bin" $path)
-
-# homebrew python
-path=("/usr/local/opt/python/libexec/bin" $path)
-
-# aws cli
-path=("${HOME}/.local/bin" $path)
-
-# neovim
-path=("${HOME}/bin/nvim-osx64/bin" $path)
+#path=("${HOME}/.yarn/bin" $path)
+#path=("${HOME}/.config/yarn/global/node_modules/.bin" $path)
 
 # load work specific config if it's there
 if [ -f "${HOME}/.zshenv_work" ]; then

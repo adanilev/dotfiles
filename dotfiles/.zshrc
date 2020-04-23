@@ -53,8 +53,8 @@ ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # load sdkman
-export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="${HOME}/.sdkman"
+#[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # git details
 git config --global user.name "Alex Danilevsky"
@@ -65,7 +65,6 @@ if [ -f "${HOME}/.zshrc_work" ]; then
   source "${HOME}/.zshrc_work"
 fi
 
-# TODO: break these into a separate file
 ### aliases ###
 
 # easier ls
@@ -77,7 +76,7 @@ alias ltr='ls -ltrh'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# terraform
-alias tf='terraform'
+# switching to nvim
+alias vim='nvim'
 
 #zprof

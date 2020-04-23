@@ -31,9 +31,9 @@ function installCoc {
 
 function installFzf {
   echo "installing fzf"
-  bash ${HOME}/.vim/pack/plugins/start/fzf/install --no-update-rc --key-bindings --completion
+  bash ${HOME}/.local/share/nvim/site/pack/plugins/start/fzf/install --no-update-rc --key-bindings --completion
 }
 
 # TODO: install nvm
-installCoc
+#installCoc
 installFzf
