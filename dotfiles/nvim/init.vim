@@ -72,9 +72,9 @@ nnoremap <C-H> <C-W><C-H>
 "nnoremap tl :tablast<CR>
 
 "easier buffer switching
-"nnoremap <Tab> :bnext<CR>
-"nnoremap <S-Tab> :bprevious<CR>
-"nnoremap <C-X> :bdelete<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-X> :bdelete<CR>
 
 "make shift-tab do the opposite of tab
 inoremap <S-Tab> <C-d>
