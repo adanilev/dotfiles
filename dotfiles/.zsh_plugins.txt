@@ -2,6 +2,9 @@
 # antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh
 # source ~/.zsh_plugins.sh
 
+# nvm helpers
+lukechilds/zsh-nvm
+
 # syntax highlighting for commands
 zdharma/fast-syntax-highlighting
 

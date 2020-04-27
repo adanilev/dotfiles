@@ -19,6 +19,10 @@ export NVM_DIR="${HOME}/.nvm"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# zsh-nvm
+export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
+
 ### path ###
 
 # don't repeat path params
