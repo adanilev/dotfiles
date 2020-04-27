@@ -79,4 +79,7 @@ alias mv='mv -i'
 # switching to nvim
 alias vim='nvim'
 
+# run python from a container
+alias pyd="docker run --rm python:3.8.2-buster"
+
 #zprof
