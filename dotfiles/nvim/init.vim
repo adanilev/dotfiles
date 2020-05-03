@@ -1,20 +1,20 @@
 "be able to use the mouse
 set mouse=a
 
-"syntax highlighting on
-"syntax enable
-
 "theme
 colorscheme nord
 
 "disable soft wrap for lines
 set nowrap
 
+"confirm before unsafe actions
+set confirm
+
 "use hybrid relative line numbers
 set number relativenumber
 
-"always set autoindenting on
-"set autoindent
+"allow switching away from edited buffers
+set hidden
 
 "incremental search
 set incsearch
@@ -44,37 +44,39 @@ nnoremap <C-O> :Ex!<CR>
 "set ttimeoutlen=10
 
 "vim-airline config
-"show tabline at top
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 
-"invoke vim commands more easily
+"open vertical diff splits
+set diffopt+=vertical
+
+" invoke vim commands more easily
 nmap ; :
 
-"map leader to space
+" map leader to space
 let mapleader="\<Space>"
 
 "remove search highlight
 nnoremap <Leader><Space> :nohlsearch<CR>
 
 "make switching windows easier
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+nnoremap <Leader>h <C-W><C-H>
 
 "make switching tabs easier
-"nnoremap tn :tabnew<Space>
-"nnoremap tk :tabnext<CR>
-"nnoremap tj :tabprev<CR>
-"nnoremap th :tabfirst<CR>
-"nnoremap tl :tablast<CR>
+nnoremap tn :tabnew<Space>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
 
-"easier buffer switching
+"make switching buffers easier
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-nnoremap <C-X> :bdelete<CR>
+nnoremap <Leader>x :bdelete<CR>
+
+" resize windows
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
 
 "make shift-tab do the opposite of tab
 inoremap <S-Tab> <C-d>
@@ -91,6 +93,11 @@ let g:NERDSpaceDelims = 1
 
 "remap fzf trigger
 nnoremap <silent> <C-p> :FZF<CR>
+
+"ReplaceWithRegister
+nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
+nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
 
 """ coc config
 "Use tab for trigger completion with characters ahead and navigate.
@@ -112,9 +119,3 @@ nnoremap <silent> <C-p> :FZF<CR>
 "nmap <silent> gy <Plug>(coc-type-definition)
 "nmap <silent> gi <Plug>(coc-implementation)
 "nmap <silent> gr <Plug>(coc-references)
-
-"ReplaceWithRegister
-"nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
-"nmap <Leader>rr <Plug>ReplaceWithRegisterLine
-"xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
-

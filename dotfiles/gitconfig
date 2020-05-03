@@ -79,6 +79,22 @@
 	changed = green
 	untracked = cyan
 
+[merge]
+  tool = nvimdiff
+
+[mergetool]
+  prompt = true
+
+[mergetool "nvimdiff"]
+  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+
+[diff]
+  tool = nvimdiff
+
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  prompt = false
+
 [user]
 	name = Alex Danilevsky
 	email = adanilev@users.noreply.github.com
