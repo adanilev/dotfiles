@@ -37,3 +37,9 @@
 [submodule "dotfiles/nvim/plugins/start/colorizer"]
 	path = dotfiles/nvim/plugins/start/colorizer
 	url = https://github.com/lilydjwg/colorizer
+[submodule "dotfiles/nvim/plugins/start/vim-gitgutter"]
+	path = dotfiles/nvim/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "dotfiles/nvim/plugins/start/nerdtree"]
+	path = dotfiles/nvim/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
