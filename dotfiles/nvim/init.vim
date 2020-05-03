@@ -33,6 +33,8 @@ set shiftwidth=2
 set splitbelow
 set splitright
 
+set updatetime=500
+
 "turn on plugins based on filetype
 "filetype plugin on
 
