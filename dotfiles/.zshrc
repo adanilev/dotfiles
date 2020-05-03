@@ -44,7 +44,7 @@ bindkey -v
 bindkey "^?" backward-delete-char
 
 # add keys to ssh-agent
-ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
+#ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 
 # load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
