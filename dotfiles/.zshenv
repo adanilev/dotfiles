@@ -1,3 +1,7 @@
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
+
 # show colours for ls output
 export CLICOLOR=1
 
@@ -13,7 +17,7 @@ export SAVEHIST=$HISTSIZE
 export HISTORY_IGNORE="(ls|ll|la|pwd|cd|exit)"
 
 # nvm
-export NVM_DIR="${HOME}/.nvm"
+ export NVM_DIR="${XDG_CONFIG_HOME}/nvm"
 
 # fzf settings
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

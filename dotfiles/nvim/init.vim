@@ -39,8 +39,8 @@ set updatetime=500
 "filetype plugin on
 
 "netrw config
-let g:netrw_liststyle = 3
-nnoremap <C-O> :Ex!<CR>
+" let g:netrw_liststyle = 3
+" nnoremap <C-O> :Ex!<CR>
 
 "decrease timeout to make status bar reflect faster
 "set ttimeoutlen=10
@@ -51,11 +51,14 @@ let g:airline_powerline_fonts = 1
 "open vertical diff splits
 set diffopt+=vertical
 
+" map leader to space
+let mapleader="\<Space>"
+
 " invoke vim commands more easily
 nmap ; :
 
-" map leader to space
-let mapleader="\<Space>"
+" NERDTree
+map <Leader>b :NERDTreeToggle<CR>
 
 "remove search highlight
 nnoremap <Leader><Space> :nohlsearch<CR>
