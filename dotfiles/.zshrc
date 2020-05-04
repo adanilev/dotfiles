@@ -52,10 +52,6 @@ bindkey "^?" backward-delete-char
 # load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# load sdkman
-#export SDKMAN_DIR="${HOME}/.sdkman"
-#[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
-
 # git details
 git config --global user.name "Alex Danilevsky"
 git config --global user.email "adanilev@users.noreply.github.com"

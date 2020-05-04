@@ -1,3 +1,4 @@
 .vscode/
 .netrwhist
 dotfiles/.gitconfig
+dotfiles/nvim/plugins/start/coc.nvim-release/
