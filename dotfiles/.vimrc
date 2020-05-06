@@ -20,6 +20,9 @@ set nowrap
 "use hybrid relative line numbers
 set number relativenumber
 
+"always show the gutter
+set signcolumn=yes
+
 "always set autoindenting on
 set autoindent
 
@@ -54,6 +57,7 @@ set ttimeoutlen=10
 "show tabline at top
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='nord'
+let g:airline_powerline_fonts = 1
 
 "invoke vim commands more easily
 nmap ; :
@@ -76,6 +80,7 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
+nnoremap tx :tabclose<CR>
 
 "easier buffer switching
 nnoremap <Tab> :bnext<CR>

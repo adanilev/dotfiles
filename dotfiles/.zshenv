@@ -5,7 +5,7 @@ export CLICOLOR=1
 export KEYTIMEOUT=1
 
 # shell history
-export HISTFILE=~/.zsh_histfile
+# export HISTFILE=~/.zsh_histfile
 # save 100k commands
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
@@ -14,6 +14,10 @@ export HISTORY_IGNORE="(ls|ll|la|pwd|cd|exit)"
 
 # nvm
 export NVM_DIR="${HOME}/.nvm"
+
+# fzf settings
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 ### path ###
 
