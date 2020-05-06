@@ -1,55 +1,31 @@
-"be able to use the mouse
-set mouse=a
+colorscheme nord       " theme
 
-"theme
-colorscheme nord
+set mouse=a            " use the mouse 
 
-"disable soft wrap for lines
-set nowrap
+set confirm            " confirm before unsafe actions
 
-"confirm before unsafe actions
-set confirm
+set nowrap             " disable soft wrap for lines
+set nu rnu             " use hybrid relative line numbers
+set hidden             " allow switching away from edited buffers
 
-"use hybrid relative line numbers
-set number relativenumber
+set incsearch          " incremental search
+set hlsearch           " highlight search
+set ignorecase         " searches are case insensitive 
+set smartcase          " ...unless they contain at least one capital letter
 
-"allow switching away from edited buffers
-set hidden
-
-"incremental search
-set incsearch
-"highlight search
-set hlsearch
-"searches are case insensitive unless they contain at least one capital letter
-set ignorecase
-set smartcase
-
-"use 2 spaces for tabs
-set expandtab
+set expandtab          " use 2 spaces for tabs
 set tabstop=2
 set shiftwidth=2
 
-"new splits will be at the bottom or to the right side of the screen
-set splitbelow
-set splitright
+set splitbelow         " new splits will open to the bottom 
+set splitright         " ...or to the right side of the current window
 
-set updatetime=500
+set updatetime=500     " makes vim-gitgutter update more quickly
 
-"turn on plugins based on filetype
-"filetype plugin on
+set signcolumn=yes     " always show the gutter
+set diffopt+=vertical  " open vertical diff splits
 
-"netrw config
-" let g:netrw_liststyle = 3
-" nnoremap <C-O> :Ex!<CR>
-
-"decrease timeout to make status bar reflect faster
-"set ttimeoutlen=10
-
-"vim-airline config
-let g:airline_powerline_fonts = 1
-
-"open vertical diff splits
-set diffopt+=vertical
+" filetype plugin on  " turn on plugins based on filetype
 
 " map leader to space
 let mapleader="\<Space>"
@@ -57,70 +33,88 @@ let mapleader="\<Space>"
 " invoke vim commands more easily
 nmap ; :
 
-" NERDTree
-map <Leader>b :NERDTreeToggle<CR>
-
-"remove search highlight
+" remove search highlight
 nnoremap <Leader><Space> :nohlsearch<CR>
 
-"make switching windows easier
-nnoremap <Leader>j <C-W><C-J>
-nnoremap <Leader>k <C-W><C-K>
-nnoremap <Leader>l <C-W><C-L>
-nnoremap <Leader>h <C-W><C-H>
+" make switching windows easier
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-"make switching tabs easier
-nnoremap tn :tabnew<Space>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
+" make switching tabs easier
+nnoremap <Leader>tn :tabnew<Space>
+nnoremap <Leader>tk :tabnext<CR>
+nnoremap <Leader>tj :tabprev<CR>
 
-"make switching buffers easier
+" make switching buffers easier
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-nnoremap <Leader>x :bdelete<CR>
+nnoremap <Leader>w :bdelete<CR>
 
 " resize windows
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
-"make shift-tab do the opposite of tab
+" make shift-tab do the opposite of tab
 inoremap <S-Tab> <C-d>
 
-"remap keys for christoomey/vim-system-copy plugin
+"     plugin configs
+""""""""""""""""""""""""""
+
+" remap keys for christoomey/vim-system-copy plugin
 nmap cy <Plug>SystemCopy
 xmap cy <Plug>SystemCopy
 nmap cp <Plug>SystemPaste
 
-"nerdcommenter config
-"comment on the far left
+"vim-airline configs
+let g:airline_powerline_fonts = 1
+
+""""" NERDTree
+" toggle the drawer
+map <Leader>b :NERDTreeToggle<CR>
+" go to current file in drawer
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>
+" delete the buffer when i delete a file from nertree
+let NERDTreeAutoDeleteBuffer = 1
+" make pretty
+let NERDTreeMinimalUI = 1
+let NERDTreeStatusline = ""
+" quit vim if nerdtree is the only open window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+""""" nerdcommenter config
+" comment on the far left
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 
-"remap fzf trigger
+" remap fzf trigger
 nnoremap <silent> <C-p> :FZF<CR>
 
-"ReplaceWithRegister
+" ReplaceWithRegister
 nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
 nmap <Leader>rr <Plug>ReplaceWithRegisterLine
 xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
 
-""" coc config
-"Use tab for trigger completion with characters ahead and navigate.
-"inoremap <silent><expr> <TAB>
-"  \ pumvisible() ? "\<C-n>" :
-"  \ <SID>check_back_space() ? "\<TAB>" :
-"  \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
+""""" coc config
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-"Remap for rename current word
-"nmap <leader>rn <Plug>(coc-rename)
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+" always open the quickfix / renaming window full-width at the bottom of the screen
+autocmd FileType qf wincmd J
 
-"Remap keys for gotos
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
