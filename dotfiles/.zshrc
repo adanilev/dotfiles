@@ -44,7 +44,7 @@ bindkey -v
 bindkey "^?" backward-delete-char
 
 # add keys to ssh-agent
-#ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
+ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 
 # load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -72,10 +72,7 @@ alias ltr='ls -ltrh'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# switching to nvim
+# use nvim
 alias vim='nvim'
-
-# run python from a container
-alias pyd="docker run --rm python:3.8.2-buster"
 
 #zprof
