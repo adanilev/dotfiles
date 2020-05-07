@@ -1,4 +1,5 @@
 NVIM_PLUGINS_DIR=$(HOME)/.local/share/nvim/site/pack
+NVIM_CONFIG_DIR=$(HOME)/.config/nvim
 
 .PHONY: all
 all: non-dot-files dotfiles update-zsh-plugins install-all-the-things
@@ -8,7 +9,8 @@ non-dot-files:
 	mkdir -p ${NVIM_PLUGINS_DIR}; \
 	ln -sfn $(CURDIR)/dotfiles/gitconfig $(HOME)/.gitconfig; \
 	ln -sfn $(CURDIR)/dotfiles/nvim/plugins ${NVIM_PLUGINS_DIR}/plugins; \
-	ln -sfn $(CURDIR)/dotfiles/nvim/init.vim $(HOME)/.config/nvim/init.vim;
+	mkdir -p ${NVIM_CONFIG_DIR}; \
+	ln -sfn $(CURDIR)/dotfiles/nvim/init.vim ${NVIM_CONFIG_DIR}/init.vim;
 
 .PHONY: dotfiles
 dotfiles:
