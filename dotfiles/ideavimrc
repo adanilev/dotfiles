@@ -1,0 +1,50 @@
+set nu rnu             " use hybrid relative line numbers
+
+set incsearch          " incremental search
+set hlsearch           " highlight search
+set ignorecase         " searches are case insensitive 
+set smartcase          " ...unless they contain at least one capital letter
+
+" map leader to space
+let mapleader=" "
+
+" invoke vim commands more easily
+nmap ; :
+
+" remove search highlight
+nnoremap <Leader><Space> :nohlsearch<CR>
+
+" make switching windows easier
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" make switching buffers easier
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+nnoremap <Leader>w :action CloseContent<CR>
+
+" fzf / go to file
+nnoremap <silent> <C-p> :action GotoFile<CR>
+
+" ReplaceWithRegister
+nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
+nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
+
+
+" Remap keys for gotos
+nmap <silent> gd :action GotoDeclaration<CR>
+nmap <silent> gy :action GotoTypeDeclaration<CR>
+nmap <silent> gi :action GotoImplementation<CR>
+
+""""" ideavim only
+set showcmd            " show (partial) command in the status bar
+set showmode           " message on the status line to show current mode
+set ideastatusicon=gray
+
+" emulated plugins
+set surround
+set commentary
+set ReplaceWithRegister

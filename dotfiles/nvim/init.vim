@@ -80,6 +80,8 @@ let NERDTreeAutoDeleteBuffer = 1
 " make pretty
 let NERDTreeMinimalUI = 1
 let NERDTreeStatusline = ""
+" show dot files
+let NERDTreeShowHidden=1
 " quit vim if nerdtree is the only open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
