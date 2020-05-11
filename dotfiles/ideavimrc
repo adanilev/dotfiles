@@ -33,6 +33,8 @@ nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
 nmap <Leader>rr <Plug>ReplaceWithRegisterLine
 xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
 
+" rename
+nmap <leader>rn :action RenameElement<CR>
 
 " Remap keys for gotos
 nmap <silent> gd :action GotoDeclaration<CR>
