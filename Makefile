@@ -12,6 +12,7 @@ non-dot-files:
 	ln -sfn $(CURDIR)/dotfiles/nvim/plugins ${NVIM_PLUGINS_DIR}/plugins; \
 	mkdir -p ${NVIM_CONFIG_DIR}; \
 	ln -sfn $(CURDIR)/dotfiles/nvim/init.vim ${NVIM_CONFIG_DIR}/init.vim; \
+	ln -sfn $(CURDIR)/dotfiles/nvim/coc-settings.json ${NVIM_CONFIG_DIR}/coc-settings.json; \
 	# intellij ideavim
 	mkdir -p ${IDEAVIM_CONFIG_DIR}; \
 	ln -sfn $(CURDIR)/dotfiles/ideavimrc ${IDEAVIM_CONFIG_DIR}/ideavimrc; \

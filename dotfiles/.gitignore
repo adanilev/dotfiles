@@ -1,4 +1,5 @@
 .env
+.idea/
 dotfiles/.vim/pack/plugins/start/coc.nvim-release
 
 ### VIM - https://github.com/github/gitignore/blob/master/Global/Vim.gitignore

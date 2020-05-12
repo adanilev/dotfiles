@@ -45,6 +45,7 @@ function installCoc {
     coc-tsserver \
     coc-yaml \
     coc-pairs \
+    coc-prettier \
     --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 }
 

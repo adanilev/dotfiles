@@ -50,7 +50,7 @@ nnoremap <Leader>tj :tabprev<CR>
 " make switching buffers easier
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-nnoremap <Leader>w :bdelete<CR>
+nnoremap <Leader>d :bp<CR>:bd #<CR>
 
 " resize windows
 nnoremap <Leader>+ :vertical resize +5<CR>
@@ -120,3 +120,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+"prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
