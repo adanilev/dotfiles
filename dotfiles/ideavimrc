@@ -23,7 +23,7 @@ nnoremap <C-H> <C-W><C-H>
 " make switching buffers easier
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
-nnoremap <Leader>w :action CloseContent<CR>
+nnoremap <Leader>d :action CloseContent<CR>
 
 nmap <leader>/ :action CommentByLineComment<CR>
 xmap <leader>/ :action CommentByLineComment<CR>

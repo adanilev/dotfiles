@@ -43,3 +43,6 @@
 [submodule "dotfiles/nvim/plugins/start/nerdtree"]
 	path = dotfiles/nvim/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "dotfiles/nvim/plugins/start/fzf.vim"]
+	path = dotfiles/nvim/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
