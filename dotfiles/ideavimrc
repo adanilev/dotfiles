@@ -25,6 +25,9 @@ nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
 nnoremap <Leader>w :action CloseContent<CR>
 
+nmap <leader>/ :action CommentByLineComment<CR>
+xmap <leader>/ :action CommentByLineComment<CR>
+
 " fzf / go to file
 nnoremap <silent> <C-p> :action GotoFile<CR>
 

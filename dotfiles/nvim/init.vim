@@ -89,6 +89,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " comment on the far left
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
+nmap <leader>/ <Plug>NERDCommenterToggle
+xmap <leader>/ <Plug>NERDCommenterToggle
 
 " remap fzf trigger
 nnoremap <silent> <C-p> :FZF<CR>

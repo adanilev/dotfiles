@@ -9,7 +9,7 @@ export CLICOLOR=1
 export KEYTIMEOUT=1
 
 # shell history
-# export HISTFILE=~/.zsh_histfile
+export HISTFILE=~/.zsh_histfile
 # save 100k commands
 export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
