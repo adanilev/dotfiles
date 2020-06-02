@@ -16,6 +16,7 @@ set smartcase          " ...unless they contain at least one capital letter
 set expandtab          " use 2 spaces for tabs
 set tabstop=2
 set shiftwidth=2
+set smartindent        " indent smartly
 
 set splitbelow         " new splits will open to the bottom 
 set splitright         " ...or to the right side of the current window
@@ -25,7 +26,8 @@ set updatetime=500     " makes vim-gitgutter update more quickly
 set signcolumn=yes     " always show the gutter
 set diffopt+=vertical  " open vertical diff splits
 
-" filetype plugin on  " turn on plugins based on filetype
+set autowrite                   " save when switching to another buffer
+" autocmd FocusLost * silent! :w  " save open buffer when nvim loses focus - ignore errors (nerdtree, help or unsaved)
 
 " map leader to space
 let mapleader="\<Space>"
@@ -112,7 +114,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Remap for rename current word
+" rename current symbol
 nmap <leader>rn <Plug>(coc-rename)
 " always open the quickfix / renaming window full-width at the bottom of the screen
 autocmd FileType qf wincmd J
@@ -125,3 +127,4 @@ nmap <silent> gr <Plug>(coc-references)
 
 "prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <Leader>p :Prettier<CR>
