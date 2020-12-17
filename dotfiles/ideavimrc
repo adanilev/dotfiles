@@ -52,6 +52,8 @@ set showcmd            " show (partial) command in the status bar
 set showmode           " message on the status line to show current mode
 set ideastatusicon=gray
 
+nmap <Leader>vsp :action MoveTabRight<CR>
+
 " emulated plugins
 set surround
 set commentary

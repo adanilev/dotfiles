@@ -26,6 +26,8 @@ set updatetime=500     " makes vim-gitgutter update more quickly
 set signcolumn=yes     " always show the gutter
 set diffopt+=vertical  " open vertical diff splits
 
+set foldmethod=syntax  " fold based on syntax
+
 set autowrite                   " save when switching to another buffer
 " autocmd FocusLost * silent! :w  " save open buffer when nvim loses focus - ignore errors (nerdtree, help or unsaved)
 
