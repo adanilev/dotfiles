@@ -72,4 +72,7 @@ alias mv='mv -i'
 # use nvim
 alias vim='nvim'
 
+# notes
+alias notes="cd ${HOME}/notes && vim ."
+
 #zprof

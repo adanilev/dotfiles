@@ -55,6 +55,11 @@ function installFzf {
     --no-update-rc --key-bindings --completion
 }
 
+function createNotes {
+  mkdir -p ${HOME}/notes
+}
+
 assertNvmInstalled
 installCoc
 installFzf
+createNotes
