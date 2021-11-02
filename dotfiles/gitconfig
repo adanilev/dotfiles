@@ -1,3 +1,6 @@
+### WARNING !!! 
+# you have to edit the non-dotted gitconfig in your dotfiles dir, ~/.gitconfig gets overwritten
+
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -96,3 +99,9 @@
 [user]
 	name = Alex Danilevsky
 	email = adanilev@users.noreply.github.com
+
+[init]
+  defaultBranch = main
+
+[pull]
+	rebase = false
