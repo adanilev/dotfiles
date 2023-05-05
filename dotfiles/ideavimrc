@@ -2,7 +2,7 @@ set nu rnu             " use hybrid relative line numbers
 
 set incsearch          " incremental search
 set hlsearch           " highlight search
-set ignorecase         " searches are case insensitive 
+set ignorecase         " searches are case insensitive
 set smartcase          " ...unless they contain at least one capital letter
 
 " map leader to space
@@ -11,29 +11,24 @@ let mapleader=" "
 " invoke vim commands more easily
 nmap ; :
 
-" remove search highlight
-nnoremap <Leader><Space> :nohlsearch<CR>
-
-" make switching windows easier
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" closest thing to showing open buffers
+nnoremap <Leader><Space> :action RecentFiles<CR>
+nnoremap <Leader>? :action RecentFiles<CR>
 
 " make switching buffers easier
 nnoremap <Tab> :action NextTab<CR>
 nnoremap <S-Tab> :action PreviousTab<CR>
 nnoremap <Leader>d :action CloseContent<CR>
 
-nmap <leader>/ :action CommentByLineComment<CR>
-xmap <leader>/ :action CommentByLineComment<CR>
+nmap gcc :action CommentByLineComment<CR>
+xmap gc :action CommentByLineComment<CR>
 
 " fzf / go to file
-nnoremap <silent> <C-p> :action GotoFile<CR>
+nnoremap <Leader>sf :action GotoFile<CR>
 
 " ReplaceWithRegister
 nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
-nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+nmap <Leader>rl <Plug>ReplaceWithRegisterLine
 xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
 
 " rename
@@ -41,26 +36,59 @@ nmap <leader>rn :action RenameElement<CR>
 
 " Remap keys for gotos
 nmap <silent> gd :action GotoDeclaration<CR>
-nmap <silent> gy :action GotoTypeDeclaration<CR>
-nmap <silent> gi :action GotoImplementation<CR>
-
-" prettier
-nmap <Leader>p :action ReformatWithPrettierAction<CR>
+nmap <silent> gD :action GotoDeclaration<CR>
+nmap <silent> <Leader>d :action GotoTypeDeclaration<CR>
+nmap <silent> gI :action GotoImplementation<CR>
 
 """"" ideavim only
+" share vim register with system clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+" edit and release ideavimrc
+nnoremap \e :e ~/.config/ideavim/ideavimrc<CR>
+nnoremap \r :source ~/.config/ideavim/ideavimrc<CR>
+
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+
 set showcmd            " show (partial) command in the status bar
 set showmode           " message on the status line to show current mode
 set ideastatusicon=gray
 
-" mimic NERDTreeFind
-nmap <leader>f :action ActivateProjectToolWindow<CR>
+" mimic NvimTree
+nmap <leader>o :action ActivateProjectToolWindow<CR>
 
 " split and move the current tab to the right
 nmap <Leader>vsp :action MoveTabRight<CR>
 
+" navigation
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
 " use intellij's navigation history
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
+
+" navigate errors
+nnoremap <Leader>e :action ShowErrorDescription<CR>
+nnoremap <Leader>q :action ActivateTODOToolWindow<CR>
+nnoremap [d :action GotoNextError<CR>
+nnoremap ]d :action GotoPreviousError<CR>
+
+" search
+nnoremap <Leader>/ :action Find<CR>
+nnoremap <Leader>sf :action FindInPath<CR>
+nnoremap <Leader>sw :action FindWordAtCaret<CR>
+
+" run forrest, run!
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+
+"reformat
+nnoremap <Leader>f  :action ReformatCode<CR>
 
 " emulated plugins
 set surround
