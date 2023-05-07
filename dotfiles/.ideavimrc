@@ -47,7 +47,7 @@ set clipboard+=ideaput
 
 " edit and release ideavimrc
 nnoremap \e :e ~/.config/ideavim/ideavimrc<CR>
-nnoremap \r :source ~/.config/ideavim/ideavimrc<CR>
+nnoremap \r :source ~/.ideavimrc<CR>
 
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 
@@ -74,10 +74,13 @@ nnoremap <Leader>e :action ShowErrorDescription<CR>
 nnoremap <Leader>q :action ActivateTODOToolWindow<CR>
 nnoremap [d :action GotoNextError<CR>
 nnoremap ]d :action GotoPreviousError<CR>
+nnoremap <Leader>a :action ShowIntentionActions<CR>
 
 " search
 nnoremap <Leader>/ :action Find<CR>
-nnoremap <Leader>sf :action FindInPath<CR>
+nnoremap <Leader>sf :action GotoFile<CR>
+nnoremap <Leader>sc :action GotoClass<CR>
+nnoremap <Leader>sg :action FindInPath<CR>
 nnoremap <Leader>sw :action FindWordAtCaret<CR>
 
 " run forrest, run!
