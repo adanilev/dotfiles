@@ -36,12 +36,23 @@ bindkey -M vicmd '^r' history-incremental-pattern-search-backward
 bindkey -M viins '^r' history-incremental-pattern-search-backward
 
 # load plugins
-source ~/.zsh_plugins.sh
+source /usr/share/zsh-antigen/antigen.zsh
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle lukechilds/zsh-nvm
+antigen bundle mafredri/zsh-async@main
+antigen bundle sindresorhus/pure@main
+antigen bundle zdharma/fast-syntax-highlighting@main
+
+antigen apply
 
 # use vi bindings
 bindkey -v
 # delete after leaving normal mode in vi-mode
 bindkey "^?" backward-delete-char
+
+# make colours pretty
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 # load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -71,8 +82,5 @@ alias mv='mv -i'
 
 # use nvim
 alias vim='nvim'
-
-# notes
-alias notes="cd ${HOME}/notes && vim ."
 
 #zprof

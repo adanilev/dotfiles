@@ -1,0 +1,48 @@
+- name: install apt packages
+  become: true
+  apt:
+    update_cache: yes
+    cache_valid_time: 600
+    state: latest
+    name:
+      - build-essential
+      - chrome-gnome-shell
+      - curl
+      - gnome-tweaks
+      - openjdk-17-jre-headless
+      - tmux
+
+- name: install snaps
+  become: true
+  snap:
+    name:
+      - slack
+      - spotify
+      - todoist
+      - vlc
+
+- name: install snaps with --classic
+  become: true
+  snap:
+    classic: true
+    name:
+      - intellij-idea-ultimate
+      - nvim
+      - sublime-merge
+
+- name: setup fonts
+  block:
+    - name: create local fonts directory
+      ansible.builtin.file:
+        path: "~{{ local_username }}/.local/share/fonts"
+        state: directory
+
+    - name: install FiraCode font
+      ansible.builtin.unarchive:
+        src: "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip"
+        dest: "~{{ local_username }}/.local/share/fonts"
+        remote_src: yes
+
+    - name: refresh fonts cache
+      ansible.builtin.shell: "fc-cache -fv"
+      become: true
