@@ -37,7 +37,7 @@ nmap <leader>rn :action RenameElement<CR>
 " Remap keys for gotos
 nmap <silent> gd :action GotoDeclaration<CR>
 nmap <silent> gD :action GotoDeclaration<CR>
-nmap <silent> <Leader>d :action GotoTypeDeclaration<CR>
+nmap <silent> <Leader>D :action GotoTypeDeclaration<CR>
 nmap <silent> gI :action GotoImplementation<CR>
 
 """"" ideavim only
