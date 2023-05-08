@@ -84,4 +84,8 @@ alias mv='mv -i'
 # use nvim
 alias vim='nvim'
 
+# use sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 #zprof
