@@ -72,6 +72,7 @@ fi
 ### aliases ###
 
 # easier ls
+alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lah'
 alias ltr='ls -ltrh'
