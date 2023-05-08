@@ -10,6 +10,7 @@
       - curl
       - gnome-tweaks
       - openjdk-17-jre-headless
+      - ripgrep
       - tmux
 
 - name: install snaps

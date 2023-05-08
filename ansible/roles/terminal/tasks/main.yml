@@ -1,0 +1,25 @@
+- name: zsh
+  block:
+    - name: install apt packages
+      become: true
+      apt:
+        update_cache: yes
+        cache_valid_time: 600
+        state: latest
+        name:
+          - zsh
+          - zsh-antigen
+          - zsh-doc
+
+    - name: change user's shell to zsh
+      become: true
+      ansible.builtin.user:
+        name: "{{ local_username }}"
+        shell: /bin/zsh
+
+- name: install tmux plugin manager
+  ansible.builtin.git:
+    repo: 'https://github.com/tmux-plugins/tpm'
+    dest: "~{{ local_username }}/.tmux/plugins/tpm"
+    depth: 1
+    version: master
