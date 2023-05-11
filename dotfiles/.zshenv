@@ -20,7 +20,7 @@ export HISTORY_IGNORE="(ls|ll|la|pwd|cd|exit)"
  export NVM_DIR="${XDG_CONFIG_HOME}/nvm"
 
 # fzf settings
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # zsh-nvm
@@ -32,12 +32,9 @@ export NVM_AUTO_USE=true
 # don't repeat path params
 typeset -U path
 
-# user's bin
+# user's bins
 path=("${HOME}/bin" $path)
-
-# yarn
-#path=("${HOME}/.yarn/bin" $path)
-#path=("${HOME}/.config/yarn/global/node_modules/.bin" $path)
+path=("${HOME}/.local/bin" $path)
 
 # load work specific config if it's there
 if [ -f "${HOME}/.zshenv_work" ]; then

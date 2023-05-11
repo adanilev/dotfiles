@@ -60,10 +60,6 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 # load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# git details
-git config --global user.name "Alex Danilevsky"
-git config --global user.email "adanilev@users.noreply.github.com"
-
 # load work specific config if it's there
 if [ -f "${HOME}/.zshrc_work" ]; then
   source "${HOME}/.zshrc_work"
@@ -74,8 +70,9 @@ fi
 # easier ls
 alias ls='ls --color=auto'
 alias ll='ls -lh'
-alias la='ls -lah'
-alias ltr='ls -ltrh'
+alias la='ll -a'
+alias ltr='ll -tr'
+alias latr='la -tr'
 
 # safer move and copy
 alias cp='cp -i'
@@ -84,8 +81,15 @@ alias mv='mv -i'
 # use nvim
 alias vim='nvim'
 
+# alias fdfind the way they recommend
+if [[ ! -f ~/.local/bin/fd ]]; then
+  mkdir -p "${HOME}/.local/bin"
+  ln -sf $(which fdfind) "${HOME}/.local/bin/fd"
+fi
+
 # use sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #zprof
+

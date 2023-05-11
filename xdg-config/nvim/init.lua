@@ -377,6 +377,7 @@ require('nvim-treesitter.configs').setup {
     'c',
     'cpp',
     'go',
+    'json',
     'lua',
     'python',
     'rust',
@@ -508,6 +509,7 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
+  terraformls = {},
   tsserver = {},
   lua_ls = {
     Lua = {

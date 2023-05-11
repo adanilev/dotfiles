@@ -17,13 +17,13 @@
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	# Pull in remote changes for the current repository and all its submodules
-	p = !"git pull; git submodule foreach git pull origin master"
+	p = !"git pull"
 
 	# Clone a repository including all submodules
 	c = clone --recursive
 
 	# Commit all changes
-	ca = !git add -A && git commit -av
+	ca = !git add -A && git commit -v
 
 	# checkout shorthand
 	co = checkout
@@ -36,10 +36,6 @@
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
 
-	# Remove branches that have already been merged with master
-	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
-
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
@@ -47,7 +43,6 @@
 	wip = !git add -A && git commit -m wip && git push
 
 [core]
-
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 
@@ -56,26 +51,22 @@
 	trustctime = false
 
 [color]
-
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
 
 [color "branch"]
-
 	current = yellow reverse
 	local = yellow
 	remote = green
 
 [color "diff"]
-
 	meta = yellow bold
 	frag = magenta bold # line info
 	old = red # deletions
 	new = green # additions
 
 [color "status"]
-
 	added = yellow
 	changed = green
 	untracked = cyan
@@ -96,12 +87,16 @@
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
   prompt = false
 
-[user]
-	name = Alex Danilevsky
-	email = adanilev@users.noreply.github.com
-
 [init]
   defaultBranch = main
 
 [pull]
 	rebase = false
+
+[user]
+	name = Alex Danilevsky
+	email = adanilev@users.noreply.github.com
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig_work
+

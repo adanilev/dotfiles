@@ -1,3 +1,9 @@
+- name: add mesa repo
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "ppa:kisak/kisak-mesa"
+    state: present
+
 - name: install apt packages
   become: true
   apt:
@@ -8,12 +14,17 @@
       - build-essential
       - chrome-gnome-shell
       - curl
+      - fd-find
+      - fzf
       - gnome-tweaks
       - gnupg
+      - jq
+      - kitty
       - openjdk-17-jre-headless
       - ripgrep
       - software-properties-common
       - tmux
+      - xclip
 
 - name: install snaps
   become: true

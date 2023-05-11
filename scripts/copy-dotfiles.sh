@@ -3,7 +3,7 @@
 set -euxo pipefail
 
 DOTFILES_DIR=dotfiles
-NVIM_DIR=nvim
+XDG_CONFIG_DIR=xdg-config
 
 # git - linked in `make dotfiles`, don't link so zshrc_work can overwrite
 cp "${DOTFILES_DIR}"/gitconfig "${DOTFILES_DIR}"/.gitconfig
@@ -17,6 +17,10 @@ find "${DOTFILES_DIR}" -maxdepth 1 -name ".*" | while read -r dotfile; do
   ln -sfn "${dotfile_path}" "${dotfile_link_path}"
 done
 
-# link the nvim
-nvim_dir_path=$(readlink -f "${NVIM_DIR}")
-ln -sfn "${nvim_dir_path}" "${HOME}"/.config/nvim
+ls "${XDG_CONFIG_DIR}" | while read -r dir_name; do
+  dir_path=$(readlink -e "${XDG_CONFIG_DIR}"/"${dir_name}")
+  dir_link_path="${HOME}"/.config/"${dir_name}"
+
+  ln -sfn "${dir_path}" "${dir_link_path}"
+done
+
