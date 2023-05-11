@@ -21,6 +21,8 @@
       - jq
       - kitty
       - openjdk-17-jre-headless
+      - python3-pip
+      - python3-venv
       - ripgrep
       - software-properties-common
       - tmux
