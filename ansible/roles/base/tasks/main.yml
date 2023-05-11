@@ -9,8 +9,10 @@
       - chrome-gnome-shell
       - curl
       - gnome-tweaks
+      - gnupg
       - openjdk-17-jre-headless
       - ripgrep
+      - software-properties-common
       - tmux
 
 - name: install snaps
@@ -47,3 +49,33 @@
     - name: refresh fonts cache
       ansible.builtin.shell: "fc-cache -fv"
       become: true
+
+- name: hashicorp
+  become: true
+  block:
+    - name: add apt key
+      ansible.builtin.apt_key:
+        url: "https://apt.releases.hashicorp.com/gpg"
+        keyring: "/etc/apt/trusted.gpg.d/hashicorp.gpg"
+
+    - name: add repo for ubuntu 22.04
+      ansible.builtin.apt_repository:
+        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com jammy main"
+        state: present
+        filename: hashicorp
+      when: ansible_distribution_release == "jammy"
+
+    - name: prioritize packages from hashicorp apt repo
+      ansible.builtin.copy:
+        src: etc/apt/preferences.d/hashicorp.pref
+        dest: /etc/apt/preferences.d/hashicorp.pref
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: install hashicorp packages
+      ansible.builtin.apt:
+        name:
+          - terraform
+        force_apt_get: yes
+
