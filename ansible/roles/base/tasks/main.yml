@@ -26,6 +26,7 @@
       - ripgrep
       - software-properties-common
       - tmux
+      - xcape
       - xclip
 
 - name: install snaps
